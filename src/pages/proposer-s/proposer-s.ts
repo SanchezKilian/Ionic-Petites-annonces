@@ -41,7 +41,7 @@ export class ProposerSPage {
             text:'valider',
             handler : ()=>{
               
-              this.requete = "User/"+this.Username.toString()+"/ID" ;
+              this.requete = "User/USERPN/"+this.Username.toString()+"/ID" ;
               
               const PassRef : firebase.database.Reference = firebase.database().ref(this.requete);
               

@@ -52,9 +52,9 @@ export class AfficheAnnoncePage {
     
   }
 
-  choixF(obj){
+  choixF(abj,obj){ //,obj
     
-    this.navCtrl.setRoot('LAnnoncePage',{IDUSER : this.idUser, OBJ :this.NomDeLObjet});
+    this.navCtrl.setRoot('LAnnoncePage',{IDUSER : this.idUser,ITEM : abj, OBJ :obj});//, OBJ :obj
   }
 
   back(){

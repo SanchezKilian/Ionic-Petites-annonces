@@ -15,7 +15,7 @@
 
 <ion-content padding> 
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="choixF(item.ID)">
+    <button ion-item *ngFor="let item of items" (click)="choixF(item,item.ID)"> <!-- ,item.ID!-->
       {{item.titre}}
       
     </button>

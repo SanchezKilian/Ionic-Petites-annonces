@@ -42,7 +42,7 @@ export class DemanderSPage {
           text:'valider',
           handler : ()=>{
             
-            this.requete = "User/"+this.idUser+"/ID" ;
+            this.requete = "User/USERPN/"+this.idUser+"/ID" ;
             
             const newRef : firebase.database.Reference = firebase.database().ref(this.requete);
             

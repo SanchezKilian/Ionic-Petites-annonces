@@ -17,17 +17,20 @@ import firebase from 'firebase';
 export class LAnnoncePage {
 
   public idUser : string;
-  private idPosteur :string;
+  public idPosteur :string;
   public name : string;
   public requete : string;
   public id : string ; 
   public reference : string;
   public type = "1" ;
+  public newID ;
+  public itemCpl;
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
     this.idUser = navParams.get("IDUSER")
 
-    this.idPosteur = this.navParams.get("OBJ");
     
+    this.itemCpl = this.navParams.get("ITEM");
+    this.idPosteur = this.navParams.get("OBJ");
   }
 
   ionViewDidLoad() {
@@ -50,13 +53,13 @@ export class LAnnoncePage {
 
               var slash = `/`;
              
-                this.requete = "Annonce/Demander/"+this.idUser+"/ID" ;
+                this.requete = "User/USERPN/"+this.idUser+"/ID" ;
               
               
               
               const PassRef : firebase.database.Reference = firebase.database().ref(this.requete);
               
-              this.id= "cc";
+              
           
               PassRef.on('value',PassSnapshot=>{
                 this.id = PassSnapshot.val(); 
@@ -65,8 +68,9 @@ export class LAnnoncePage {
 
 
 
-              this.name = this.idPosteur.toString();
-              const personRefTemp: firebase.database.Reference = firebase.database().ref(`/User/`+this.name.toString()); 
+              
+              this.newID = Math.random()*100000000000000000;
+              const personRefTemp: firebase.database.Reference = firebase.database().ref(`/User/USERPI/`+this.idPosteur+'/Annonce/'+this.idUser); 
               personRefTemp.set({mail});
               this.navCtrl.push('MenuPage',{IDUSER : this.idUser});
             }

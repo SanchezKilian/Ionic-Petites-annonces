@@ -17,10 +17,10 @@
   <ion-list>
 
     <ion-item>
-      <ion-label>Titre de l'annonce : {{item.titre}} </ion-label>
+      <ion-label>Titre de l'annonce : {{itemCpl.titre}} </ion-label>
     </ion-item>
     <ion-item>
-      <ion-label>Description : {{item.description}}</ion-label>
+      <ion-label>Description : {{itemCpl.description}}</ion-label>
     </ion-item>
     <ion-item>
       <ion-label stacked>E-mail de contact</ion-label>
@@ -28,14 +28,7 @@
     </ion-item>
 
   </ion-list>
-  a
-  {{item}}
-  b
-  {{reference}}
-  c
-  {{id}}
-  d
-  {{name}}
+ {{idPosteur}}
   <ion-fab right bottom>
         <button (click)="send(mail)" ion-fab color="dark"><ion-icon name="send"></ion-icon></button>
         

@@ -24,12 +24,10 @@ export class HomePage {
 
   
   login(Username: string, password: string){
-    this.requete = "User/"+Username+"/Password" ;
+    this.requete = "User/USERPN/"+Username+"/Password" ;
     
     const PassRef : firebase.database.Reference = firebase.database().ref(this.requete);
     
-    this.mdp = "cc";
-
     PassRef.on('value',PassSnapshot=>{
       this.mdp = PassSnapshot.val(); 
     });

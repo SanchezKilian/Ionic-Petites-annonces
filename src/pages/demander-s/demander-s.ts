@@ -60,7 +60,7 @@ export class DemanderSPage {
             var slash = `/`;
             const personRefTemp: firebase.database.Reference = 
             firebase.database().ref(`/Annonces/Demander`  +slash+ rubrique + slash + idAnnonce);  // ajouter  id user
-            personRefTemp.set({titre,description,ID :this.identifiant});
+            personRefTemp.set({titre,description,ID :this.identifiant, IDAnnonce :idAnnonce });
                 
             this.navCtrl.push('MenuPage'); //,{IDUSER : this.idUser}
 

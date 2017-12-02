@@ -1,5 +1,5 @@
 <!--
-  Generated template for the MesAnnoncesPage page.
+  Generated template for the DemandeursPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>mesAnnonces</ion-title>
+    <ion-title>demandeurs</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,16 +15,13 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="choix(item.info.IdAnnonce)"> <!-- ,item.ID!-->
-      {{item.info.Titre}}
+    <button ion-item *ngFor="let item of items" (click)="choix(item.NOM,item.MAIL)"> <!--   !--> 
+      {{item.NOM}}
       
     </button>
     
   </ion-list>
-  {{Username}}
+  {{UserId}}
   ---
-  {{IdUser}}
-  ---
-  {{items}}
- 
+  {{IdAnnonce}}
 </ion-content>

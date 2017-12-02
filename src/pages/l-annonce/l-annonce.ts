@@ -25,12 +25,16 @@ export class LAnnoncePage {
   public type = "1" ;
   public newID ;
   public itemCpl;
+  public titre;
+  public IDAnnonce;
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
     this.idUser = navParams.get("IDUSER")
 
     
     this.itemCpl = this.navParams.get("ITEM");
     this.idPosteur = this.navParams.get("OBJ");
+    this.IDAnnonce = this.navParams.get("IDANNONCE");
+    this.titre = this.navParams.get("TITRE");
   }
 
   ionViewDidLoad() {
@@ -51,7 +55,7 @@ export class LAnnoncePage {
             text:'valider',
             handler : ()=>{
 
-              var slash = `/`;
+              
              
                 this.requete = "User/USERPN/"+this.idUser+"/ID" ;
               
@@ -70,8 +74,12 @@ export class LAnnoncePage {
 
               
               this.newID = Math.random()*100000000000000000;
-              const personRefTemp: firebase.database.Reference = firebase.database().ref(`/User/USERPI/`+this.idPosteur+'/Annonce/'+this.idUser); 
-              personRefTemp.set({mail});
+              const personRefTemp: firebase.database.Reference = 
+              firebase.database().ref(`/User/USERPI/`+this.idPosteur+'/RepAnnonce/'+this.IDAnnonce +'/info' ); 
+              personRefTemp.set({IdAnnonce : this.IDAnnonce, Titre : this.titre}); // mail
+              const personRef: firebase.database.Reference = 
+              firebase.database().ref(`/User/USERPI/`+this.idPosteur+'/RepAnnonce/'+this.IDAnnonce + '/Demandeur/' + this.idUser  );  
+              personRef.set({NOM : this.idUser,MAIL : mail}); // mail
               this.navCtrl.push('MenuPage',{IDUSER : this.idUser});
             }
           }

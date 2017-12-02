@@ -1,0 +1,38 @@
+<!--
+  Generated template for the MenuPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <div text-center>
+        <ion-title>\\Insert Name Here/</ion-title>
+    </div>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+
+<ion-content padding>
+    <ion-grid>
+      <ion-row >
+        <div text-center>
+          <button ion-button round (click)="goChercheAnnonce()" > Chercher une annonces ?  </button>
+                    
+          <button ion-button round (click)="goWriteAn()" > Créer une annonce : </button>
+                      
+          <button ion-button round (click)="gererAnnonces()"> Voir mes annonces :  </button>
+        </div>
+      </ion-row>
+    </ion-grid>
+    
+    <ion-fab right bottom>
+        <button (click)="logOut()" ion-fab color="dark"><ion-icon name="log-out"></ion-icon></button>
+        
+      </ion-fab>
+
+</ion-content>

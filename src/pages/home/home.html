@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+        <div text-center>\\Insert Name Here/</div>
+     
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+    <div text-center>
+        <ion-list>
+            
+            <ion-item>
+                
+                <ion-label floating>Username</ion-label>
+                <ion-input type="text" [(ngModel)]="Username"></ion-input>
+           
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Password</ion-label>
+                <ion-input  type="text" [(ngModel)]="password"></ion-input>
+                 
+            </ion-item>
+            
+            <ion-item>
+                <div text-center>
+
+                    <button 
+                    ion-button (click)="login(Username, password)"  round>
+                    login
+                  </button>
+                </div>
+                
+            </ion-item>
+            <ion-item>
+                <div text-center>
+                    <button ion-button (click)="New()" [navPush]="new-account"  round>Créer un compte : </button>
+                </div>
+              
+            </ion-item>
+            <ion-item>
+              
+            </ion-item>
+            
+          
+          </ion-list>
+
+    </div>
+
+
+</ion-content>

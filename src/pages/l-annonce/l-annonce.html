@@ -1,0 +1,44 @@
+<!--
+  Generated template for the LAnnoncePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>LAnnonce</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Titre de l'annonce : {{item.titre}} </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Description : {{item.description}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>E-mail de contact</ion-label>
+      <ion-input type="email" placeholder="Email"  [(ngModel)]="mail"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  a
+  {{item}}
+  b
+  {{reference}}
+  c
+  {{id}}
+  d
+  {{name}}
+  <ion-fab right bottom>
+        <button (click)="send(mail)" ion-fab color="dark"><ion-icon name="send"></ion-icon></button>
+        
+      </ion-fab>
+
+</ion-content>

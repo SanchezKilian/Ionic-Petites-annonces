@@ -1,0 +1,14 @@
+{
+    "User" : [{
+        "admin" : {
+            "Password" : "password"
+        },
+        "kilian" : {
+            "Password" : "mdp"
+        }   
+    }             
+    ]
+}
+
+
+

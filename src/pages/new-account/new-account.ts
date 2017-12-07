@@ -28,12 +28,12 @@ export class NewAccountPage {
     if(Password == PasswordVerif){
       const personRefTemp: firebase.database.Reference = 
       firebase.database().ref(`/User/USERPN/`+Username); 
-      this.id = Math.random()*100000000000000000;
+      this.id = Math.random()*10000000000000000000;
       personRefTemp.set({Password: Password,ID : this.id });
       
       const personRef: firebase.database.Reference = firebase.database().ref(`/User/USERPI/`+this.id); 
       personRef.set({ Name:Username});
-      this.navCtrl.setRoot('MenuPage');
+      this.navCtrl.setRoot('MenuPage', {IDUSER : Username});
     }
 
     

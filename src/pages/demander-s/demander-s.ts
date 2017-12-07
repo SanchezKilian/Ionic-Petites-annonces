@@ -28,7 +28,17 @@ export class DemanderSPage {
     console.log('ionViewDidLoad DemanderSPage');
   }
   Valider(rubrique :string ,titre : string,description:string ){
+/*////////////////////////////////////////////////////////////////*/
+this.requete = "User/USERPN/"+this.idUser+"/ID" ;
 
+const newRef : firebase.database.Reference = firebase.database().ref(this.requete);
+newRef.on('value',newSnapshot=>{
+  this.identifiant = newSnapshot.val(); 
+});
+
+
+
+/*////////////////////////////////////////////////////////////////*/
     let confirm = this.alertCtrl.create({
       title : "Poster cette annonce ?",
       message : " rubrique : " + rubrique +" \n description = " + description,
@@ -45,10 +55,6 @@ export class DemanderSPage {
             this.requete = "User/USERPN/"+this.idUser+"/ID" ;
             
             const newRef : firebase.database.Reference = firebase.database().ref(this.requete);
-            
-            
-            
-            
             newRef.on('value',newSnapshot=>{
               this.identifiant = newSnapshot.val(); 
             });
@@ -62,7 +68,7 @@ export class DemanderSPage {
             firebase.database().ref(`/Annonces/Demander`  +slash+ rubrique + slash + idAnnonce);  // ajouter  id user
             personRefTemp.set({titre,description,ID :this.identifiant, IDAnnonce :idAnnonce });
                 
-            this.navCtrl.push('MenuPage'); //,{IDUSER : this.idUser}
+            this.navCtrl.push('MenuPage',{IDUSER : this.idUser}); //,{IDUSER : this.idUser}
 
 
             

@@ -27,7 +27,13 @@ export class ProposerSPage {
   }
 
   Valider(rubrique :string ,titre:string,description:string ){
-
+    /*/////////////////////////////////////////////////*/
+    this.requete = "User/USERPN/"+this.Username.toString()+"/ID" ;
+    
+    const PassRef : firebase.database.Reference = firebase.database().ref(this.requete);
+    
+    PassRef.on('value',PassSnapshot=>{this.id = PassSnapshot.val(); });
+     /*/////////////////////////////////////////////////*/
     let confirm = this.alertCtrl.create({
       title : "Poster cette annonce ?",
       message : " rubrique : " + rubrique +" \n description = " + description,
@@ -56,7 +62,7 @@ export class ProposerSPage {
               firebase.database().ref(`/Annonces/Proposer`  +slash+ rubrique + slash + idAnnonce);  
               personRefTemp.set({titre,description,ID :this.id, IDAnnonce :idAnnonce});
                   
-              this.navCtrl.push('MenuPage'); //,{IDUSER : this.idUser}
+              this.navCtrl.push('MenuPage',{IDUSER : this.Username}); //,{IDUSER : this.idUser}
   
             }
           }

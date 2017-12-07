@@ -30,9 +30,18 @@
       </ion-row>
     </ion-grid>
     
-    <ion-fab right bottom>
-        <button (click)="logOut()" ion-fab color="dark"><ion-icon name="log-out"></ion-icon></button>
-        
-      </ion-fab>
+    
 
 </ion-content>
+
+
+<ion-footer>
+
+  <ion-title>{{Username}}</ion-title>
+  <ion-fab right bottom>
+    <button (click)="logOut()" ion-fab color="dark"><ion-icon name="log-out"></ion-icon></button>
+    
+  </ion-fab>
+
+
+</ion-footer>

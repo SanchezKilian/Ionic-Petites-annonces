@@ -27,10 +27,14 @@ export class HomePage {
     this.requete = "User/USERPN/"+Username+"/Password" ;
     
     const PassRef : firebase.database.Reference = firebase.database().ref(this.requete);
-    
     PassRef.on('value',PassSnapshot=>{
       this.mdp = PassSnapshot.val(); 
     });
+    /*///////////////////////////////////////////////////////*/
+    PassRef.on('value',PassSnapshot=>{
+      this.mdp = PassSnapshot.val(); 
+    });
+    /**////////////////////////////////////////////////////////// */
 
     
     if (this.mdp.toString() == password){

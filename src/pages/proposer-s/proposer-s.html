@@ -36,10 +36,15 @@
           <ion-textarea [(ngModel)]="description"></ion-textarea>
         </ion-item>
     </ion-list>
-    name : 
-    {{Username}}
+
     <ion-fab right bottom>
         <button (click)="Valider(rubrique,titre,description)"  ion-fab color="dark"><ion-icon name="checkmark-circle"></ion-icon></button>
       </ion-fab>
 </ion-content>
-
+<ion-footer>
+  
+    <ion-title>{{Username}}</ion-title>
+    
+  
+  
+  </ion-footer>

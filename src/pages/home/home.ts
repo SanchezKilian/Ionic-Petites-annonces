@@ -15,7 +15,7 @@ export class HomePage {
   public user ={};
   public myPersonne = {};
 
-  public  mdp : string ;
+  public  mdp = "" ;
   public requete : string;
 
   constructor(public navCtrl: NavController) {
@@ -40,7 +40,7 @@ export class HomePage {
     if (this.mdp.toString() == password){
 
         
-        this.navCtrl.setRoot('MenuPage',{IDUSER : Username});
+        this.navCtrl.setRoot('MenuPage',{IDUSER : Username, ACTION : 1});
        
         
     }

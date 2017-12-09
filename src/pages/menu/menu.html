@@ -18,9 +18,12 @@
 
 
 <ion-content padding>
+    <ion-img [width]="imgWidth" [height]="imgHeight" src="logo.png"></ion-img>
     <ion-grid>
       <ion-row >
         <div text-center>
+         
+
           <button ion-button round (click)="goChercheAnnonce()" > Chercher une annonces ?  </button>
                     
           <button ion-button round (click)="goWriteAn()" > Créer une annonce : </button>

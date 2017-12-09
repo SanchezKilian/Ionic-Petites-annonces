@@ -80,7 +80,7 @@ export class LAnnoncePage {
               const personRef: firebase.database.Reference = 
               firebase.database().ref(`/User/USERPI/`+this.idPosteur+'/RepAnnonce/'+this.IDAnnonce + '/Demandeur/' + this.idUser  );  
               personRef.set({NOM : this.idUser,MAIL : mail}); // mail
-              this.navCtrl.setRoot('MenuPage',{IDUSER : this.idUser});
+              this.navCtrl.setRoot('MenuPage',{IDUSER : this.idUser, ACTION : 3});
             }
           }
       ]

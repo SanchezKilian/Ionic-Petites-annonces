@@ -13,7 +13,7 @@ import firebase from 'firebase';
 @IonicPage()
 @Component({
   selector: 'page-affiche-annonce',
-  templateUrl: 'affiche-annonce.html',
+  templateUrl: 'affiche-annonce.html', 
 })
 export class AfficheAnnoncePage {
   public type : string;

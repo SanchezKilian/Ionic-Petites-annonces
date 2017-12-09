@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { AlertController } from 'ionic-angular';
 
+import {Toast} from '@ionic-native/toast'
 
 /**
  * Generated class for the MenuPage page.
@@ -19,8 +20,24 @@ import { AlertController } from 'ionic-angular';
 })
 export class MenuPage {
   public Username : string;
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
+  public actionP ;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public toast : Toast) {
   this.Username = navParams.get("IDUSER");
+    this.actionP = navParams.get("ACTION");
+
+    switch(this.actionP){
+      case 1 :
+        toast.show('i m a little toast','5000','center').subscribe(
+          toast => {
+            console.log(toast);
+          }
+
+        );
+      break;
+    }
+
+
   }
 
 

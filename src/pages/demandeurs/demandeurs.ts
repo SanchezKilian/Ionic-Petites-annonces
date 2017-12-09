@@ -49,7 +49,7 @@ export class DemandeursPage {
           {
             text:'OK',
             handler : ()=>{
-              this.navCtrl.setRoot('MenuPage');
+              this.navCtrl.setRoot('MenuPage',{IDUSER : this.UserId, ACTION : 2});
             }
           }
       ]

@@ -68,7 +68,7 @@ newRef.on('value',newSnapshot=>{
             firebase.database().ref(`/Annonces/Demander`  +slash+ rubrique + slash + idAnnonce);  // ajouter  id user
             personRefTemp.set({titre,description,ID :this.identifiant, IDAnnonce :idAnnonce });
                 
-            this.navCtrl.push('MenuPage',{IDUSER : this.idUser, ACTION : 4}); //,{IDUSER : this.idUser}
+            this.navCtrl.push('MenuPage',{IDUSER : this.idUser, ACTION : 4, ANNONCE : titre}); //,{IDUSER : this.idUser}
 
 
             

@@ -62,7 +62,7 @@ export class ProposerSPage {
               firebase.database().ref(`/Annonces/Proposer`  +slash+ rubrique + slash + idAnnonce);  
               personRefTemp.set({titre,description,ID :this.id, IDAnnonce :idAnnonce});
                   
-              this.navCtrl.push('MenuPage',{IDUSER : this.Username, ACTION : 4}); //,{IDUSER : this.idUser}
+              this.navCtrl.push('MenuPage',{IDUSER : this.Username, ACTION : 4, ANNONCE : titre}); //,{IDUSER : this.idUser}
   
             }
           }

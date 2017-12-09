@@ -21,21 +21,35 @@ import {Toast} from '@ionic-native/toast'
 export class MenuPage {
   public Username : string;
   public actionP ;
+  public DataRécup;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, public toast : Toast) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController ) {
   this.Username = navParams.get("IDUSER");
     this.actionP = navParams.get("ACTION");
-
+    
+/*
     switch(this.actionP){
-      case 1 :
-        toast.show('i m a little toast','5000','center').subscribe(
+      case 3 :
+        this.DataRécup = navParams.get("ANNONCE")
+        toast.show('Votre E-Mail a bien été envoyé pour l annonce '+ this.DataRécup,'5000','center').subscribe(
           toast => {
             console.log(toast);
           }
 
         );
       break;
-    }
+      case 4 :
+      this.DataRécup = navParams.get("ANNONCE")
+      toast.show('Votre annonce : '+this.DataRécup+ ' a bien été crée.' ,'5000','center').subscribe(
+        toast => {
+          console.log(toast);
+        }
+
+      );
+    break;
+
+    }*/
 
 
   }

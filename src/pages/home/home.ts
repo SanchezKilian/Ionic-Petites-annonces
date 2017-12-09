@@ -15,7 +15,7 @@ export class HomePage {
   public user ={};
   public myPersonne = {};
 
-  public  mdp = "" ;
+  public  mdp : string ;
   public requete : string;
 
   constructor(public navCtrl: NavController) {
@@ -27,10 +27,9 @@ export class HomePage {
     this.requete = "User/USERPN/"+Username+"/Password" ;
     
     const PassRef : firebase.database.Reference = firebase.database().ref(this.requete);
-    PassRef.on('value',PassSnapshot=>{
-      this.mdp = PassSnapshot.val(); 
-    });
+    
     /*///////////////////////////////////////////////////////*/
+    this.mdp = "cc";
     PassRef.on('value',PassSnapshot=>{
       this.mdp = PassSnapshot.val(); 
     });

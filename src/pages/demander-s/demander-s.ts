@@ -67,8 +67,12 @@ newRef.on('value',newSnapshot=>{
             const personRefTemp: firebase.database.Reference = 
             firebase.database().ref(`/Annonces/Demander`  +slash+ rubrique + slash + idAnnonce);  // ajouter  id user
             personRefTemp.set({titre,description,ID :this.identifiant, IDAnnonce :idAnnonce });
+            const personRefL: firebase.database.Reference = 
+            firebase.database().ref(`/Annonces/last/` +idAnnonce );  // ajouter  id user
+            personRefL.set({titre,description,ID :this.identifiant, IDAnnonce :idAnnonce });
                 
-            this.navCtrl.push('MenuPage',{IDUSER : this.idUser, ACTION : 4, ANNONCE : titre}); //,{IDUSER : this.idUser}
+                
+            this.navCtrl.setRoot('MenuPage',{IDUSER : this.idUser, ACTION : 4, ANNONCE : titre}); //,{IDUSER : this.idUser}
 
 
             

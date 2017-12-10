@@ -5,7 +5,7 @@ import { HomePage } from '../home/home';
 import { AlertController } from 'ionic-angular';
 
 import {Toast} from '@ionic-native/toast'
-
+import firebase from 'firebase';
 /**
  * Generated class for the MenuPage page.
  *
@@ -23,33 +23,31 @@ export class MenuPage {
   public actionP ;
   public DataRécup;
 
+  public requete;
+  
+  public Aitems : Array<string> = [];
+
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController ) {
   this.Username = navParams.get("IDUSER");
     this.actionP = navParams.get("ACTION");
     
-/*
-    switch(this.actionP){
-      case 3 :
-        this.DataRécup = navParams.get("ANNONCE")
-        toast.show('Votre E-Mail a bien été envoyé pour l annonce '+ this.DataRécup,'5000','center').subscribe(
-          toast => {
-            console.log(toast);
-          }
 
-        );
-      break;
-      case 4 :
-      this.DataRécup = navParams.get("ANNONCE")
-      toast.show('Votre annonce : '+this.DataRécup+ ' a bien été crée.' ,'5000','center').subscribe(
-        toast => {
-          console.log(toast);
-        }
+    
+       
+    this.requete = "/Annonces/last";
+    const itemRefM : firebase.database.Reference = firebase.database().ref(this.requete);
+    this.Aitems = [];
+    itemRefM.on('value',ItemSnapshot=>{
+      ItemSnapshot.forEach (ItemSnap => {
+        this.Aitems.push(ItemSnap.val());
+        return false;
+      });
+    });
+    
 
-      );
-    break;
 
-    }*/
 
 
   }

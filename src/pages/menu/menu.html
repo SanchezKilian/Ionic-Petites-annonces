@@ -37,7 +37,23 @@
  </ion-content>
 </ion-menu>
 
+<ion-content>
+  
 
+  <ion-card  *ngFor="let item of Aitems" > <!--  !-->
+      <ion-item>
+        <h2>{{item.titre}}</h2>
+      </ion-item>
+      <ion-card-content>
+        <p>
+          {{item.description}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  
+
+
+</ion-content>
 
 
 

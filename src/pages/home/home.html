@@ -14,24 +14,20 @@
 
 <ion-content padding>
     <div text-center>
-        <img width="200" height="200" src="https://firebasestorage.googleapis.com/v0/b/projetz-603d4.appspot.com/o/logo.PNG?alt=media&token=9431de2c-30a7-4afc-9aa5-6907d8416d41">
-        <ion-list >
-            
-               
-           
-            <ion-item>
+        <img width="250" height="250" src="https://firebasestorage.googleapis.com/v0/b/projetz-603d4.appspot.com/o/logo.PNG?alt=media&token=9431de2c-30a7-4afc-9aa5-6907d8416d41">
+
+                <ion-item>
+                    <ion-label floating>Username</ion-label>
+                    <ion-input type="text" [(ngModel)]="Username"></ion-input>
+                </ion-item>
                 
-                <ion-label floating>Username</ion-label>
-                <ion-input type="text" [(ngModel)]="Username"></ion-input>
            
-            </ion-item>
-            <ion-item>
-                <ion-label floating>Password</ion-label>
-                <ion-input  type="password" [(ngModel)]="password"></ion-input>
-                 
-            </ion-item>
+                <ion-item>
+                    <ion-label floating>Password</ion-label>
+                    <ion-input  type="password" [(ngModel)]="password"></ion-input>
+                </ion-item>
+                
             
-            <ion-item>
                 <div text-center>
 
                     <button 
@@ -40,21 +36,23 @@
                   </button>
                 </div>
                 
-            </ion-item>
-            <ion-item>
-                <div text-center>
+           
+                <div text-center >
                     <button ion-button (click)="New()" [navPush]="new-account"  round>Créer un compte : </button>
                 </div>
               
-            </ion-item>
-            <ion-item>
-              
-            </ion-item>
-            
           
-          </ion-list>
 
     </div>
 
 
 </ion-content>
+
+<ion-footer text-center>
+        <div text-center>
+                <ion-title>\\Stu'Deal/</ion-title>
+                <ion-label>
+                        Une application par un étudiant, pour les étudiants
+                      </ion-label>
+            </div>
+</ion-footer>

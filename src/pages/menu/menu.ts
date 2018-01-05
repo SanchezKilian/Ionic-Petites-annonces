@@ -3,9 +3,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
 import { AlertController } from 'ionic-angular';
-
+import {Toast} from '@ionic-native/toast'
 
 import firebase from 'firebase';
+
 /**
  * Generated class for the MenuPage page.
  *
@@ -30,6 +31,7 @@ export class MenuPage {
   
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController ) {
+   
   this.Username = navParams.get("IDUSER");
     this.actionP = navParams.get("ACTION");
     
@@ -51,7 +53,7 @@ export class MenuPage {
 
 
   }
-
+ 
 
   goChercheAnnonce(){
     this.navCtrl.push('RechercheAnnoncePage',{IDUSER : this.Username});

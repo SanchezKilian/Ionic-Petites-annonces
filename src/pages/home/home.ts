@@ -43,25 +43,7 @@ export class HomePage {
        
         
     }
-    this.requete = "User/USERPN/"+Username+"/Password" ;
     
-     const PassRef2 : firebase.database.Reference = firebase.database().ref(this.requete);
-    
-    /*///////////////////////////////////////////////////////*/
-    this.mdp = "cc";
-    PassRef2.on('value',PassSnapshot=>{
-      this.mdp = PassSnapshot.val(); 
-    });
-    /**////////////////////////////////////////////////////////// */
-
-    
-    if (this.mdp.toString() == password){
-
-        
-        this.navCtrl.setRoot('MenuPage',{IDUSER : Username, ACTION : 1});
-       
-        
-    }
  
 }
 

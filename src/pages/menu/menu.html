@@ -37,7 +37,7 @@
  </ion-content>
 </ion-menu>
 
-<ion-content>
+<ion-content padding class="menuP">
   
 
   <ion-card  *ngFor="let item of Aitems" > <!--  !-->
@@ -51,14 +51,14 @@
       </ion-card-content>
       <ion-row>
         <ion-col>
-          <button ion-button clear small>
+          <button ion-button clear small (click)="postuler(item,item.ID,item.IDAnnonce,item.titre)">
             <div >Postuler</div>
           </button>
         </ion-col>
         <ion-col>
-          <button ion-button icon-right clear small>
+          <button ion-button icon-right clear small (click)="AutresAnnonces(item.type, item.rubrique)">
             <ion-icon name="add"></ion-icon>
-            <div>Plus d'annonces</div>
+            <div> Plus d'annonces</div>
           </button>
         </ion-col>
       </ion-row>

@@ -4,7 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { AlertController } from 'ionic-angular';
 
-import {Toast} from '@ionic-native/toast'
+
 import firebase from 'firebase';
 /**
  * Generated class for the MenuPage page.
@@ -86,4 +86,13 @@ export class MenuPage {
   logOut(){
     this.navCtrl.setRoot(HomePage);
   }
+
+  postuler(item : Array<string> ,itemID : string, itemIDAnnonce : string ,itemtitre : string){
+    this.navCtrl.setRoot('LAnnoncePage',{IDUSER : this.Username,ITEM : item, OBJ :itemID, IDANNONCE : itemIDAnnonce, TITRE : itemtitre});
+  }
+
+  AutresAnnonces(itemtype : string, itemRubrique : string){
+    this.navCtrl.setRoot('AfficheAnnoncePage',{TYPE : itemtype, RUB : itemRubrique,IDUSER : this.Username});
+  }
+
 }

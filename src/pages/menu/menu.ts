@@ -25,7 +25,7 @@ export class MenuPage {
   public DataRécup;
 
   public requete;
-  
+  public type : string;
   public Aitems : Array<string> = [];
 
   
@@ -55,11 +55,12 @@ export class MenuPage {
   }
  
 
-  goChercheAnnonce(){
-    this.navCtrl.push('RechercheAnnoncePage',{IDUSER : this.Username});
+  goCherD(){
+    this.type ="Demander"
+    this.navCtrl.push('AfficheAnnoncePage',{IDUSER : this.Username,TYPE : this.type});
   }
-  goWriteAn()
-  {
+  goRepD()
+  {/*
     let confirm = this.alertCtrl.create({
       title : "Type d'annonce : ",
       message : " Vous souhaitez demander ou proposer un service ?",
@@ -79,9 +80,12 @@ export class MenuPage {
       ]
     });
     confirm.present();
-
-    
+*/
+this.navCtrl.setRoot('AfficheAnnoncePage',{IDUSER : this.Username,TYPE : "Proposer"});
   }
+
+
+
   gererAnnonces(){
     this.navCtrl.push('MesAnnoncesPage',{IDUSER : this.Username});
   }

@@ -10,13 +10,19 @@
     </div>
 
 
+    <ion-nav #mycontent [root]="MenuPage" ></ion-nav>
+
+</ion-navbar>
+
+
+</ion-header>
 <ion-menu  [content]="mycontent">
   <ion-content padding>   
          <ion-list>
           <div text-center>          
-           <button ion-button round (click)="goChercheAnnonce()" > Chercher une annonces ?  </button>
+           <button ion-button round (click)="goCherD()" > Rechercher un DEAL  </button>
                      
-           <button ion-button round (click)="goWriteAn()" > Créer une annonce : </button>
+           <button ion-button round (click)="goRepD()" > Repondre à un DEAL </button>
                        
            <button ion-button round (click)="gererAnnonces()"> Voir mes annonces :  </button>           
           </div>
@@ -27,35 +33,6 @@
          </ion-footer> 
  </ion-content>
 </ion-menu>
-<ion-nav #mycontent [root]="MenuPage" ></ion-nav>
-
-</ion-navbar>
-
-</ion-header>
-<!--
-<ion-header>
-<ion-navbar mainPageNavBarColor>
-     <button menuToggle start>
-    <ion-icon name="menu"></ion-icon>
-   </button>
-  <ion-menu [content]="mycontent">
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item detail-none>Close Menu</button>
-    </ion-list>
-       <ion-list>
-      <button menuClose ion-item detail-none>Close Menu 2</button>
-    </ion-list>
-       <ion-list>
-      <button menuClose ion-item detail-none>Close Menu 3</button>
-    </ion-list>
-  </ion-content>
-</ion-menu>
-<ion-nav #mycontent [root]="rootPage"></ion-nav>
-</ion-navbar>
-</ion-header>
-
--->
 
 <ion-content padding class="menuP"> 
   

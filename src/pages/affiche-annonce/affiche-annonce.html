@@ -13,21 +13,131 @@
 </ion-header>
 
 
-<ion-content padding> 
+<ion-content> 
+
+    <ion-slides pager>
+
+        <ion-slide style="background-color: green">
+          <ion-header>
+              {{type}} un cours : 
+          </ion-header>
+
+          <ion-list>
+              <button ion-item *ngFor="let item of itemC" (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)"> 
+                {{item.titre}}
+                
+              </button>
+              
+            </ion-list>
+
+            <ion-fab right bottom>
+                <button (click)="AddC()" ion-fab color="dark"><ion-icon name="add"></ion-icon></button>  
+            </ion-fab>
+
+        </ion-slide>
+      
+        <ion-slide style="background-color: blue">
+           <ion-header>
+              {{type}} un livres :
+            </ion-header>
+
+            <ion-list>
+                <button ion-item *ngFor="let item of itemL" (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)"> 
+                  {{item.titre}}
+                  
+                </button>
+                
+              </ion-list>
+  
+              <ion-fab right bottom>
+                  <button (click)="AddL()" ion-fab color="dark"><ion-icon name="add"></ion-icon></button>  
+              </ion-fab>
+
+        </ion-slide>
+      
+        <ion-slide style="background-color: red">
+            <ion-header>
+                {{type}} du mobiliers : 
+            </ion-header>
+
+            <ion-list>
+                <button ion-item *ngFor="let item of itemM" (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)"> 
+                  {{item.titre}}
+                  
+                </button>
+                
+              </ion-list>
+  
+              <ion-fab right bottom>
+                  <button (click)="AddM()" ion-fab color="dark"><ion-icon name="add"></ion-icon></button>  
+              </ion-fab>
+
+        </ion-slide>
+
+        <ion-slide style="background-color: #31427B">
+            <ion-header>
+                Chercher un repas :
+            </ion-header>
+
+            <ion-list>
+                <button ion-item *ngFor="let item of itemR" (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)"> 
+                  {{item.titre}}
+                  
+                </button>
+                
+              </ion-list>
+  
+              <ion-fab right bottom>
+                  <button (click)="AdRC()" ion-fab color="dark"><ion-icon name="add"></ion-icon></button>  
+              </ion-fab>
+
+        </ion-slide>
+
+        <ion-slide style="background-color: rgb(101, 123, 49)">
+            <ion-header>
+                Chercher une colocation :
+            </ion-header>
+
+            <ion-list>
+                <button ion-item *ngFor="let item of itemCo" (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)"> 
+                  {{item.titre}}
+                  
+                </button>
+                
+              </ion-list>
+  
+              <ion-fab right bottom>
+                  <button (click)="AddCol()" ion-fab color="dark"><ion-icon name="add"></ion-icon></button>  
+              </ion-fab>
+
+        </ion-slide>
+      
+      </ion-slides>
+
+
+<!--
   <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)"> <!-- ,item.ID!-->
+    <button ion-item *ngFor="let item of items" (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)"> 
       {{item.titre}}
       
     </button>
     
   </ion-list>
+-->
+
 
   <ion-fab left bottom>
-      <button (click)="back()" ion-fab color="dark"><ion-icon name="arow-back"></ion-icon></button>
-      
-    </ion-fab>
+    <button (click)="back()" ion-fab color="dark"><ion-icon name="arrow-back"></ion-icon></button>
+  </ion-fab>
+
+    
 
 </ion-content>
+
+
+
+
+
 <ion-footer>
   
     <ion-title>{{Username}}</ion-title>

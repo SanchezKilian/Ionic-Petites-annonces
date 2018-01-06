@@ -21,7 +21,12 @@ export class AfficheAnnoncePage {
   
   public requete : string;
 
-  public items : Array<string> = [];
+  public itemC : Array<string> = [];
+  public itemL : Array<string> = [];
+  public itemM : Array<string> = [];
+  public itemR : Array<string> = [];
+  public itemCo : Array<string> = [];
+  
   public idUser : string;
   public NomDeLObjet :string ;
 
@@ -31,17 +36,67 @@ export class AfficheAnnoncePage {
     this.type =navParams.get("TYPE");
     this.rubrique = this.navParams.get("RUB");
     
-    this.requete = "/Annonces/" + this.type + `/` + this.rubrique;
+    this.requete = "/Annonces/" + this.type + "/cours";
     const itemRef : firebase.database.Reference = firebase.database().ref(this.requete);
     //`/Annonces/`+ this.type +`/` + this.rubrique
-    this.items = [];
+    this.itemC = [];
 
     itemRef.on('value',ItemSnapshot=>{
       ItemSnapshot.forEach (ItemSnap => {
-        this.items.push(ItemSnap.val());
+        this.itemC.push(ItemSnap.val());
         return false;
       });
     });
+
+
+    this.requete = "/Annonces/" + this.type + "/livre";
+    const itemRefL : firebase.database.Reference = firebase.database().ref(this.requete);
+    //`/Annonces/`+ this.type +`/` + this.rubrique
+    this.itemL = [];
+
+    itemRefL.on('value',ItemSnapshot=>{
+      ItemSnapshot.forEach (ItemSnap => {
+        this.itemL.push(ItemSnap.val());
+        return false;
+      });
+    });
+
+    this.requete = "/Annonces/" + this.type + "/mobilier";
+    const itemRefM : firebase.database.Reference = firebase.database().ref(this.requete);
+    //`/Annonces/`+ this.type +`/` + this.rubrique
+    this.itemM = [];
+
+    itemRefM.on('value',ItemSnapshot=>{
+      ItemSnapshot.forEach (ItemSnap => {
+        this.itemM.push(ItemSnap.val());
+        return false;
+      });
+    });
+
+    this.requete = "/Annonces/" + this.type + "/repas";
+    const itemRefR : firebase.database.Reference = firebase.database().ref(this.requete);
+    //`/Annonces/`+ this.type +`/` + this.rubrique
+    this.itemR = [];
+
+    itemRefR.on('value',ItemSnapshot=>{
+      ItemSnapshot.forEach (ItemSnap => {
+        this.itemR.push(ItemSnap.val());
+        return false;
+      });
+    });
+
+    this.requete = "/Annonces/" + this.type + "/coloc";
+    const itemRefCo : firebase.database.Reference = firebase.database().ref(this.requete);
+    //`/Annonces/`+ this.type +`/` + this.rubrique
+    this.itemCo = [];
+
+    itemRefCo.on('value',ItemSnapshot=>{
+      ItemSnapshot.forEach (ItemSnap => {
+        this.itemCo.push(ItemSnap.val());
+        return false;
+      });
+    });
+
      
     
 
@@ -58,7 +113,8 @@ export class AfficheAnnoncePage {
   }
 
   back(){
-    this.navCtrl.setRoot('RechercheAnnoncePage',{IDUSER : this.idUser});
+    this.navCtrl.setRoot('MenuPage',{IDUSER : this.idUser});
+    
   }
 
 }

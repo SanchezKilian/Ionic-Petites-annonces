@@ -56,7 +56,7 @@ export class MenuPage {
  
 
   goCherD(){
-    this.type ="Demander"
+    this.type ="Proposer"
     this.navCtrl.push('AfficheAnnoncePage',{IDUSER : this.Username,TYPE : this.type});
   }
   goRepD()
@@ -81,7 +81,7 @@ export class MenuPage {
     });
     confirm.present();
 */
-this.navCtrl.setRoot('AfficheAnnoncePage',{IDUSER : this.Username,TYPE : "Proposer"});
+this.navCtrl.setRoot('AfficheAnnoncePage',{IDUSER : this.Username,TYPE : "Demander"});
   }
 
 

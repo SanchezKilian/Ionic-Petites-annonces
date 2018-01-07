@@ -117,6 +117,41 @@ export class AfficheAnnoncePage {
     
   }
 
+  AddC(){
+    if(this.type =="Demander"){
+      this.navCtrl.push('DemanderSPage',{IDUSER : this.idUser});
+    }
+    else{
+      this.navCtrl.push('ProposerSPage',{IDUSER : this.idUser});
+    }
+  }
+  AddL(){
+    if(this.type =="Demander"){
+      this.navCtrl.push('DemanderSPage',{IDUSER : this.idUser});
+    }
+    else{
+      this.navCtrl.push('ProposerSPage',{IDUSER : this.idUser});
+    }
+  }
+  AddM(){
+    if(this.type =="Demander"){
+      this.navCtrl.push('DemanderSPage',{IDUSER : this.idUser});
+    }
+    else{
+      this.navCtrl.push('ProposerSPage',{IDUSER : this.idUser});
+    }
+  }
+  AdRC(){
+
+  }
+  AddCol(){
+    if(this.type =="Demander"){
+      this.navCtrl.push('DemanderSPage',{IDUSER : this.idUser});
+    }
+    else{
+      this.navCtrl.push('ProposerSPage',{IDUSER : this.idUser});
+    }
+  }
 }
 
 

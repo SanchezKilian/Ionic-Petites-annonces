@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 
 import { HomePage } from '../home/home';
 import { AlertController } from 'ionic-angular';
@@ -30,7 +30,7 @@ export class MenuPage {
 
   
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController ) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,platform: Platform, public alertCtrl: AlertController ) {
    
   this.Username = navParams.get("IDUSER");
     this.actionP = navParams.get("ACTION");
@@ -49,9 +49,15 @@ export class MenuPage {
     });
     
 
+    /*------------- GESTION HARDWARE BACK BUTTON -------------------------*/
+
+      let backAction = platform.registerBackButtonAction(() => {
+        console.log("hey that's funny");
 
 
+      },2);
 
+    /*--------------------------------------------------------------------*/
   }
  
 

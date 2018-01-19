@@ -15,19 +15,27 @@
 
 <ion-content> 
 
-    <ion-slides pager>
+    <ion-slides pager >
 
         <ion-slide style="background-color: green">
           <ion-header>
-              {{type}} un cours : 
+              {{type}} un cours : {{iSlide}}
           </ion-header>
 
-          <ion-list>
-              <button ion-item *ngFor="let item of itemC" (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)"> 
-               
+          <ion-list> 
+             
+            <ion-item icon-top *ngFor="let item of itemC">
                 
-              </button>
+                <u>{{item.titre}}</u> 
+                
+                <button right (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)" class="button button-dark"> 
+                    <ion-icon color="light" name="arrow-forward" item-left></ion-icon>
+                  </button>
+                
+                  
+            
               
+            </ion-item>
             </ion-list>
 
             <ion-fab right bottom>

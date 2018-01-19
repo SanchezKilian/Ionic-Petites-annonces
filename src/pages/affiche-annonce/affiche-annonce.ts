@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ViewChild } from '@angular/core';
+import { Slides } from 'ionic-angular';
+
 import firebase from 'firebase';
 
 
@@ -30,12 +33,19 @@ export class AfficheAnnoncePage {
   public idUser : string;
   public NomDeLObjet :string ;
 
+
+  public  idSlide = 25;
+  @ViewChild(Slides) slides: Slides;
+  
   public objet : string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.idUser = navParams.get("IDUSER")
     this.type =navParams.get("TYPE");
     this.rubrique = this.navParams.get("RUB");
     
+    
+
+
     this.requete = "/Annonces/" + this.type + "/cours";
     const itemRef : firebase.database.Reference = firebase.database().ref(this.requete);
     //`/Annonces/`+ this.type +`/` + this.rubrique
@@ -152,6 +162,8 @@ export class AfficheAnnoncePage {
       this.navCtrl.push('ProposerSPage',{IDUSER : this.idUser});
     }
   }
+
+
 }
 
 

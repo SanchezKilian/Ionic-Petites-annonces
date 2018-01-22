@@ -152,7 +152,7 @@ export class AfficheAnnoncePage {
     }
   }
   AdRC(){
-
+    this.navCtrl.push('NewRepasPage',{IDUSER : this.idUser});
   }
   AddCol(){
     if(this.type =="Demander"){

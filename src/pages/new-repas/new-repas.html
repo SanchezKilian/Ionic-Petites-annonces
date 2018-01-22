@@ -1,0 +1,88 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>NewRepas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color: #31427B" text-center>
+  <ion-list>
+    <ion-item>
+        <ion-label>Date du repas : </ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="LaDate"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Lieu du repas </ion-label>
+        <ion-textarea [(ngModel)]="Lieu"></ion-textarea>
+    </ion-item>
+
+  </ion-list>
+  <!--
+        <ion-card>
+            <ion-card-header>
+                Menu :
+            </ion-card-header>
+            <ion-card-content>
+                <ion-card>
+                    <ion-card-header>
+                        Entrée :
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-textarea [(ngModel)]="entree"></ion-textarea>
+                    </ion-card-content>
+                  </ion-card>
+
+                  <ion-card>
+                      <ion-card-header>
+                          Plat :
+                      </ion-card-header>
+                      <ion-card-content>
+                          <ion-textarea [(ngModel)]="plat"></ion-textarea>
+                      </ion-card-content>
+                    </ion-card>
+
+                    <ion-card>
+                        <ion-card-header>
+                            Dessert :
+                        </ion-card-header>
+                        <ion-card-content>
+                            <ion-textarea [(ngModel)]="dessert"></ion-textarea>
+                        </ion-card-content>
+                      </ion-card>
+            </ion-card-content>
+          </ion-card>
+        -->
+        
+                <ion-card>
+                    <ion-card-header>
+                        Entrée :
+                    </ion-card-header>
+                    <ion-card-content>
+                        <ion-textarea [(ngModel)]="entree"></ion-textarea>
+                    </ion-card-content>
+                  </ion-card>
+
+                  <ion-card>
+                      <ion-card-header>
+                          Plat :
+                      </ion-card-header>
+                      <ion-card-content>
+                          <ion-textarea [(ngModel)]="plat"></ion-textarea>
+                      </ion-card-content>
+                    </ion-card>
+
+                    <ion-card>
+                        <ion-card-header>
+                            Dessert :
+                        </ion-card-header>
+                        <ion-card-content>
+                            <ion-textarea [(ngModel)]="dessert"></ion-textarea>
+                        </ion-card-content>
+                      </ion-card>
+           
+      
+ 
+</ion-content>

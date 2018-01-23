@@ -85,4 +85,5 @@
     <plugin name="cordova-plugin-camera" spec="^2.4.1" />
     <plugin name="cordova-plugin-x-toast" spec="^2.6.0" />
     <engine name="android" spec="~6.3.0" />
+    <allow-navigation href="http://172.18.196.113:8101" />
 </widget>

@@ -11,51 +11,7 @@ import { LoadingController } from 'ionic-angular';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
-  /***********************************************************************************************/
-
-  styles: [
-    `
-   
-    .custom-spinner-container {
-      position: relative;
-      display: inline-block;
-      box-sizing: border-box;
-    }
-    `,
-    `
-    .custom-spinner-box {
-      position: relative;
-      box-sizing: border-box;
-      border: 4px solid #000;
-      width: 60px;
-      height: 60px;
-      animation: spin 3s infinite linear;
-    }
-    `,
-    `
-    .custom-spinner-box:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      box-sizing: border-box;
-      border: 4px solid #000;
-      width: 40px;
-      height: 40px;
-      animation: pulse 1.5s infinite ease;
-    }
-    `,
-    `
-    .wp .custom-spinner-box,
-    .wp .custom-spinner-box:before {
-      border-color: #fff;
-    }
-    `
-    
-]
-
-  /***********************************************************************************************/
+  
 })
 export class HomePage {
   public user ={};
@@ -66,17 +22,9 @@ export class HomePage {
 
   constructor(public navCtrl: NavController,public loadingCtrl: LoadingController) {
     this.requete = "User/USERPN/admin/Password" ;
-    
     const PassRef : firebase.database.Reference = firebase.database().ref(this.requete);
-    
-    /*///////////////////////////////////////////////////////*/
-   
-    
-
     PassRef.on('value',PassSnapshot=>{
-      
       this.mdp = PassSnapshot.val(); 
-      
     });
   }
   

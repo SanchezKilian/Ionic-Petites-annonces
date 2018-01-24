@@ -34,10 +34,7 @@ export class MenuPage {
    
   this.Username = navParams.get("IDUSER");
     this.actionP = navParams.get("ACTION");
-    
-
-    
-       
+   
     this.requete = "/Annonces/last";
     const itemRefM : firebase.database.Reference = firebase.database().ref(this.requete);
     this.Aitems = [];
@@ -52,9 +49,6 @@ export class MenuPage {
     /*------------- GESTION HARDWARE BACK BUTTON -------------------------*/
 
       let backAction = platform.registerBackButtonAction(() => {
-        console.log("hey that's funny");
-
-
       },2);
 
     /*--------------------------------------------------------------------*/

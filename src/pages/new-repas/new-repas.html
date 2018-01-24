@@ -1,15 +1,12 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>NewRepas</ion-title>
+    <ion-title>Création d'un nouveau repas</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content padding style="background-color: #31427B" text-center>
     <ion-card style="background-color: rgb(0, 0, 0)">
-            <ion-card-header style="color: white">Informations général :</ion-card-header>
+        <ion-card-header style="color: white">Informations général :</ion-card-header>
             <ion-card-content>
                     <ion-card>
                             <ion-card-header>
@@ -33,15 +30,34 @@
 
                     <ion-card>
                             <ion-card-header>
-                                    participation : (€)
+                                    Participation : (€)
                             </ion-card-header>
                             <ion-card-content>
                                     <ion-input type="number" style="border:dashed 2px orange;" [(ngModel)]="participation"></ion-input>
                             </ion-card-content>
                     </ion-card>
+
+                    <ion-card>
+                            <ion-card-header>
+                                    Nombre de participnt :
+                            </ion-card-header>
+                            <ion-card-content>
+                                    <ion-input type="number" style="border:dashed 2px orange;" [(ngModel)]="nbPart"></ion-input>
+                            </ion-card-content>
+                    </ion-card>
                 
                 </ion-card-content>
-    </ion-card>        
+    </ion-card>  
+
+    <ion-card style="background-color: rgb(0, 0, 0)">
+            <ion-card>
+                    <ion-card-header> Intitulé du repas :  </ion-card-header>
+                    <ion-card-content>
+                            <ion-textarea style="border:dashed 2px orange;" [(ngModel)]="Intitul"></ion-textarea>
+                    </ion-card-content>
+            </ion-card>
+        </ion-card>
+
     <ion-card style="background-color: rgb(0, 0, 0)">
             <ion-card >
             <ion-card-header>
@@ -66,9 +82,18 @@
                     Dessert :
                 </ion-card-header>
                 <ion-card-content>
-                    <ion-textarea style="border:dashed 2px orange;" [(ngModel)]="dessert" default="crumble"></ion-textarea>
+                    <ion-textarea style="border:dashed 2px orange;" [(ngModel)]="dessert" > crumble </ion-textarea>
                 </ion-card-content>
             </ion-card>
     </ion-card>
 
+    <ion-card style="background-color: rgb(0, 0, 0)">
+        <ion-card>
+                <ion-card-content>
+                        <button ion-button (click)="Valider(myDate, Lieu, participation, entree, plat, dessert, nbPart, Intitul)" round>
+                            Valider
+                        </button>
+                </ion-card-content>
+        </ion-card>
+    </ion-card>
 </ion-content>

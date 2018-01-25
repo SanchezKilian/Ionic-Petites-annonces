@@ -60,7 +60,7 @@ export class ProposerSPage {
               var slash = `/`;
               const personRefTemp: firebase.database.Reference = 
               firebase.database().ref(`/Annonces/Proposer`  +slash+ rubrique + slash + idAnnonce);  
-              personRefTemp.set({titre,description,ID :this.id, IDAnnonce :idAnnonce});
+              personRefTemp.set({titre,description,ID :this.id, IDAnnonce :idAnnonce,rubrique : rubrique });
               const personRefE: firebase.database.Reference = 
               firebase.database().ref(`/Annonces/last/`+ rubrique);  
               personRefE.set({titre,description,ID :this.id, IDAnnonce :idAnnonce});

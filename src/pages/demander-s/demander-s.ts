@@ -66,11 +66,12 @@ newRef.on('value',newSnapshot=>{
             var slash = `/`;
             const personRefTemp: firebase.database.Reference = 
             firebase.database().ref(`/Annonces/Demander`  +slash+ rubrique + slash + idAnnonce);  // ajouter  id user
-            personRefTemp.set({titre,description,ID :this.identifiant, IDAnnonce :idAnnonce });
+            personRefTemp.set({titre,description,ID :this.identifiant, IDAnnonce :idAnnonce,rubrique : rubrique });
             const personRefL: firebase.database.Reference = 
-            firebase.database().ref(`/Annonces/last/` +idAnnonce );  
-            personRefL.set({titre,description,ID :this.identifiant, IDAnnonce :idAnnonce, type : "Demander", rubrique });
-           
+            /*firebase.database().ref(`/Annonces/last/` +idAnnonce );  
+            personRefL.set({titre,description,ID :this.identifiant, IDAnnonce :idAnnonce, type : "Demander", rubrique });*/
+            firebase.database().ref(`/Annonces/last/`+ rubrique);  
+            personRefL.set({titre,description,ID :this.identifiant, IDAnnonce :idAnnonce});
            
                 
                 

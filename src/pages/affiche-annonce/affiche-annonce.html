@@ -22,22 +22,16 @@
               {{type}} un cours : {{iSlide}}
           </ion-header>
 
-          <ion-list> 
-             
-            <ion-item icon-top *ngFor="let item of itemC">
-                
+            <ion-card icon-top *ngFor="let item of itemC">
+              <ion-card-content>
                 <u>{{item.titre}}</u> 
                 
                 <button right (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)" class="button button-dark"> 
                     <ion-icon color="light" name="arrow-forward" item-left></ion-icon>
-                  </button>
-                
-                  
-            
-              
-            </ion-item>
-            </ion-list>
-
+                </button>
+              </ion-card-content>
+            </ion-card>
+           
             <ion-fab right bottom>
                 <button (click)="AddC()" ion-fab color="dark"><ion-icon name="add"></ion-icon></button>  
             </ion-fab>
@@ -49,13 +43,14 @@
               {{type}} un livres :
             </ion-header>
 
-            <ion-list>
-                <button ion-item *ngFor="let item of itemL" (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)"> 
-                  <u>{{item.titre}}</u> 
-                  
-                </button>
-                
-              </ion-list>
+            <ion-card ion-top *ngFor="let item of itemL">
+                <ion-card-content>
+                    <u>{{item.titre}}</u> 
+                    <button right (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)" class="button button-dark"> 
+                        <ion-icon color="light" name="arrow-forward" item-left></ion-icon>
+                    </button>
+                </ion-card-content>
+              </ion-card>
   
               <ion-fab right bottom>
                   <button (click)="AddL()" ion-fab color="dark"><ion-icon name="add"></ion-icon></button>  
@@ -68,13 +63,14 @@
                 {{type}} du mobiliers : 
             </ion-header>
 
-            <ion-list>
-                <button ion-item *ngFor="let item of itemM" (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)"> 
+            <ion-card ion-top *ngFor="let item of itemM">
+                <ion-card-content>
                   <u>{{item.titre}}</u> 
-                  
-                </button>
-                
-              </ion-list>
+                  <button right (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)" class="button button-dark"> 
+                      <ion-icon color="light" name="arrow-forward" item-left></ion-icon>
+                  </button>
+              </ion-card-content>
+            </ion-card>
   
               <ion-fab right bottom>
                   <button (click)="AddM()" ion-fab color="dark"><ion-icon name="add"></ion-icon></button>  
@@ -87,13 +83,15 @@
                 Chercher un repas :
             </ion-header>
 
-            <ion-list>
-                <button ion-item *ngFor="let item of itemR" (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)"> 
+            <ion-card ion-top *ngFor="let item of itemR">
+                <ion-card-content>
                   <u>{{item.titre}}</u> 
-                  
-                </button>
-                
-              </ion-list>
+
+                  <button right (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)" class="button button-dark"> 
+                      <ion-icon color="light" name="arrow-forward" item-left></ion-icon>
+                  </button>                
+              </ion-card-content>
+              </ion-card>
   
               <ion-fab right bottom>
                   <button (click)="AdRC()" ion-fab color="dark"><ion-icon name="add"></ion-icon></button>  
@@ -106,13 +104,14 @@
                 Chercher une colocation :
             </ion-header>
 
-            <ion-list>
-                <button ion-item *ngFor="let item of itemCo" (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)"> 
+            <ion-card ion-top *ngFor="let item of itemCo"  >
+                <ion-card-content>
                   <u>{{item.titre}}</u> 
-                  
-                </button>
-                
-              </ion-list>
+                  <button right (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)" class="button button-dark"> 
+                      <ion-icon color="light" name="arrow-forward" item-left></ion-icon>
+                  </button>               
+                </ion-card-content>
+              </ion-card>
   
               <ion-fab right bottom>
                   <button (click)="AddCol()" ion-fab color="dark"><ion-icon name="add"></ion-icon></button>  
@@ -121,17 +120,6 @@
         </ion-slide>
       
       </ion-slides>
-
-
-<!--
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)"> 
-      {{item.titre}}
-      
-    </button>
-    
-  </ion-list>
--->
 
 
   <ion-fab left bottom>

@@ -1,0 +1,20 @@
+<ion-slide style="background-color: green">
+        <ion-header>
+            {{type}} un cours : {{iSlide}}
+        </ion-header>
+
+          <ion-card icon-top *ngFor="let item of itemC">
+            <ion-card-content>
+              <u>{{item.titre}}</u> 
+              
+              <button right (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)" class="button button-dark"> 
+                  <ion-icon color="light" name="arrow-forward" item-left></ion-icon>
+              </button>
+            </ion-card-content>
+          </ion-card>
+         
+          <ion-fab right bottom>
+              <button (click)="AddC()" ion-fab color="dark"><ion-icon name="add"></ion-icon></button>  
+          </ion-fab>
+
+      </ion-slide>

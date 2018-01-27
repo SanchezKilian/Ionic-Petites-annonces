@@ -49,7 +49,7 @@ newRef.on('value',newSnapshot=>{
           }
         },
         {
-          text:'valider',
+          text:'poster',
           handler : ()=>{
             
             this.requete = "User/USERPN/"+this.idUser+"/ID" ;

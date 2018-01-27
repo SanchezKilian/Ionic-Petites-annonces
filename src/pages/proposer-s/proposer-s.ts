@@ -44,7 +44,7 @@ export class ProposerSPage {
             }
           },
           {
-            text:'valider',
+            text:'poster',
             handler : ()=>{
               
               this.requete = "User/USERPN/"+this.Username.toString()+"/ID" ;

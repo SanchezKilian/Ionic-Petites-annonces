@@ -17,7 +17,7 @@
 
     <ion-slides pager >
 
-        <ion-slide style="background-color: green">
+        <ion-slide style="background-color: rgba(11, 100, 11, 0.24)">
           <ion-header>
               {{type}} un cours : {{iSlide}}
           </ion-header>
@@ -38,12 +38,12 @@
 
         </ion-slide>
       
-        <ion-slide style="background-color: blue">
+        <ion-slide style="background-color: rgba(35, 35, 141, 0.521)">
            <ion-header>
               {{type}} un livres :
             </ion-header>
 
-            <ion-card ion-top *ngFor="let item of itemL">
+            <ion-card icon-top *ngFor="let item of itemL">
                 <ion-card-content>
                     <u>{{item.titre}}</u> 
                     <button right (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)" class="button button-dark"> 
@@ -58,12 +58,12 @@
 
         </ion-slide>
       
-        <ion-slide style="background-color: red">
+        <ion-slide style="background-color: rgba(238, 20, 20, 0.603)">
             <ion-header>
                 {{type}} du mobiliers : 
             </ion-header>
 
-            <ion-card ion-top *ngFor="let item of itemM">
+            <ion-card icon-top *ngFor="let item of itemM">
                 <ion-card-content>
                   <u>{{item.titre}}</u> 
                   <button right (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)" class="button button-dark"> 
@@ -83,7 +83,7 @@
                 Chercher un repas :
             </ion-header>
 
-            <ion-card ion-top *ngFor="let item of itemR">
+            <ion-card icon-top *ngFor="let item of itemR">
                 <ion-card-content>
                   <u>{{item.titre}}</u> 
 
@@ -104,7 +104,7 @@
                 Chercher une colocation :
             </ion-header>
 
-            <ion-card ion-top *ngFor="let item of itemCo"  >
+            <ion-card icon-top *ngFor="let item of itemCo"  >
                 <ion-card-content>
                   <u>{{item.titre}}</u> 
                   <button right (click)="choixF(item,item.ID,item.IDAnnonce,item.titre)" class="button button-dark"> 

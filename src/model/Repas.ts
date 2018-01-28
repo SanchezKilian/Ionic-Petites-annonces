@@ -1,4 +1,3 @@
-
 import { AngularFireDatabase } from 'angularfire2/database';
 import firebase from 'firebase';
 
@@ -45,6 +44,10 @@ export class Repas{
                 "plat" : this.plat, "dessert" : this.dessert, "nombre de participant" : this.nbPart,
                 "nom" : this.name
         });
+    }
+
+    participate(){
+
     }
 
 

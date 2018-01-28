@@ -81,7 +81,7 @@ export class MenuPage {
     });
     confirm.present();
 */
-this.navCtrl.setRoot('AfficheAnnoncePage',{IDUSER : this.Username,TYPE : "Demander"});
+this.navCtrl.push('AfficheAnnoncePage',{IDUSER : this.Username,TYPE : "Demander"});
   }
 
 

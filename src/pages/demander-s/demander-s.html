@@ -16,33 +16,47 @@
 
 
 
-<ion-content padding>
+<ion-content padding style="background-color: #31427B">
     <ion-list>
-      <ion-item>
-          <ion-label>Rubriques : </ion-label>
+      <ion-card>
+        <ion-card-content>
+          <ion-item style="border:dashed 2px orange;" text-center>
+          <ion-label>Rubriques(Demander) : </ion-label>
             <ion-select [(ngModel)]="rubrique">
-              <ion-option value="" selected>valeur sélectionné</ion-option>
               <ion-option value="livre">Livres</ion-option>
               <ion-option value="mobilier">Mobilier</ion-option>
-              <ion-option value="cours">Demander un cours</ion-option>
-              <ion-option value="coloc">Trouver une colocation</ion-option>
+              <ion-option value="cours">Cours</ion-option>
+              <ion-option value="coloc">Colocation</ion-option>
             </ion-select>
-        </ion-item>
-        <ion-item>
+          </ion-item>
+        </ion-card-content>
+        </ion-card>
+        <ion-card>
             <ion-label >Titre :</ion-label>
+            <ion-card-content>
+              <ion-item style="border:dashed 2px orange;" text-center>
             <ion-input [(ngModel)]="titre"></ion-input>
           </ion-item>
-        <ion-item>
+        </ion-card-content>
+          </ion-card>
+        <ion-card>
           <ion-label stacked>Description </ion-label>
+          <ion-card-content>
+          <ion-item style="border:dashed 2px orange;" text-center>
           <ion-textarea [(ngModel)]="description"></ion-textarea>
         </ion-item>
+        </ion-card-content>
+        </ion-card>
     </ion-list>
     
 
     <ion-fab right bottom>
         <button (click)="Valider(rubrique,titre,description)"  ion-fab color="dark"><ion-icon name="checkmark-circle"></ion-icon></button>
-        
-      </ion-fab>
+    </ion-fab>
+    <ion-fab left bottom>
+        <button (click)="back()"  ion-fab color="dark"><ion-icon name="arrow-left"></ion-icon></button>
+    </ion-fab>
+
 </ion-content>
 <ion-footer>
   

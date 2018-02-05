@@ -4,7 +4,9 @@ class User{
 /* Information sur l'user */
     private identifiant : string;
     private nom : string;
+    private prenom : string;
     private password : string;
+    private mail : string;
 
 /* Requetes et réferences pour la communication serveur */
     private requete : string;
@@ -32,5 +34,12 @@ class User{
 /* Retourne la liste des personne interessés pour une certaine annonces posté par l'utilisateur actuel */
     getInterest(idAnnonce : string){
 
+    }
+
+/*  envoie du mail  à la créaion du compte */
+    sendMail(){
+        
+        this.mail = this.prenom + "." + this.nom + "@univ-lemans.fr";
+        
     }
 }

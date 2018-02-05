@@ -47,7 +47,8 @@ export class HomePage {
 }
 
   login(Username: string, password: string){
-    this.requete = "User/USERPN/"+Username+"/Password" ;
+    if(password != null){
+      this.requete = "User/USERPN/"+Username+"/Password" ;
    
     const PassRef : firebase.database.Reference = firebase.database().ref(this.requete);
     
@@ -57,11 +58,13 @@ export class HomePage {
         this.presentLoadingCustom();    
           this.navCtrl.setRoot('MenuPage',{IDUSER : Username, ACTION : 1}); 
       } 
-    });  
+    }); 
+    }
+     
 }
 
 New(){
-    this.navCtrl.setRoot('NewAccountPage');
+    this.navCtrl.push('NewAccountPage');
   }
 
 }

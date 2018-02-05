@@ -1,6 +1,9 @@
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import firebase from 'firebase';
+import { Component } from '@angular/core';
+
+
 /**
  * Generated class for the LAnnoncePage page.
  *

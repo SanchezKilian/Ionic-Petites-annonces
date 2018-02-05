@@ -86,4 +86,5 @@
     <plugin name="cordova-plugin-x-toast" spec="^2.6.0" />
     <engine name="android" spec="~6.3.0" />
     <allow-navigation href="http://172.18.196.113:8101" />
+    <plugin name="cordova-plugin-email-composer" spec="^0.8.14" />
 </widget>

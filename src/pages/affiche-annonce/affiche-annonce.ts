@@ -150,9 +150,11 @@ export class AfficheAnnoncePage {
       this.navCtrl.push('DemanderSPage',{IDUSER : this.idUser});
     }
   }
+  */
   AdRC(){
     this.navCtrl.push('NewRepasPage',{IDUSER : this.idUser});
   }
+  /*
   AddCol(){
     if(this.type =="Demander"){
       this.navCtrl.push('ProposerSPage',{IDUSER : this.idUser});

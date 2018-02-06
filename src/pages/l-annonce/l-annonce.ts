@@ -55,26 +55,16 @@ export class LAnnoncePage {
           },
           {
             text:'valider',
-            handler : ()=>{
-
-              
+            handler : ()=>{              
              
-                this.requete = "User/USERPN/"+this.idUser+"/ID" ;
-              
-              
+              this.requete = "User/USERPN/"+this.idUser+"/ID" ;              
               
               const PassRef : firebase.database.Reference = firebase.database().ref(this.requete);
-              
-              
           
               PassRef.on('value',PassSnapshot=>{
                 this.id = PassSnapshot.val(); 
               });
 
-
-
-
-              
               this.newID = Math.random()*100000000000000000;
               const personRefTemp: firebase.database.Reference = 
               firebase.database().ref(`/User/USERPI/`+this.idPosteur+'/RepAnnonce/'+this.IDAnnonce +'/info' ); 

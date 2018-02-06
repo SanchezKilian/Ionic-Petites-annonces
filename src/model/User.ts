@@ -1,4 +1,5 @@
 import firebase from 'firebase';
+import { AlertController } from 'ionic-angular';
 
 class User{
 /* Information sur l'user */

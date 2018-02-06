@@ -8,18 +8,23 @@
   
     <ion-navbar>
       <div text-center>
-          <ion-title>\\Stu'Deal/</ion-title>
+          <ion-title>\\AD Need/</ion-title>
       </div>
     </ion-navbar>
   
   </ion-header>
 
 
-<ion-content padding>
+<ion-content padding >
+  <div text-center>
   <ion-list>
     <ion-item>
-      <ion-label floating>Username</ion-label>
-      <ion-input type="text" [(ngModel)]="Username"></ion-input>
+      <ion-label floating>Nom</ion-label>
+      <ion-input type="text" [(ngModel)]="nom"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label floating>Prenom</ion-label>
+      <ion-input type="text" [(ngModel)]="prenom"></ion-input>
   </ion-item>
   <ion-item>
       <ion-label floating>Password</ion-label>
@@ -30,9 +35,11 @@
     <ion-input type="password" [(ngModel)]="PasswordVerif"></ion-input>
   </ion-item>
   <ion-item>
-      <button ion-button (click)="create(Username, Password, PasswordVerif)"  round>Créer le compte</button>
+      <button style="background-color: rgb(0,74,91)" 
+      ion-button (click)="create(nom,prenom, Password, PasswordVerif)"  round>Créer le compte</button>
   </ion-item>
     
 
   </ion-list>
+</div>
 </ion-content>

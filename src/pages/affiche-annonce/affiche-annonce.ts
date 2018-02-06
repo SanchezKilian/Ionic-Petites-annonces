@@ -119,15 +119,13 @@ export class AfficheAnnoncePage {
 
   choixF(abj,obj,idAnnonce,titre){ //,obj
     
-    this.navCtrl.setRoot('LAnnoncePage',{IDUSER : this.idUser,ITEM : abj, OBJ :obj, IDANNONCE : idAnnonce, TITRE : titre});//, OBJ :obj
+    this.navCtrl.push('LAnnoncePage',{IDUSER : this.idUser,ITEM : abj, OBJ :obj, IDANNONCE : idAnnonce, TITRE : titre});//, OBJ :obj
   }
 
-  back(){
-    this.navCtrl.setRoot('MenuPage',{IDUSER : this.idUser});
-    
-  }
 
-  AddC(){
+
+
+  Add(){
     if(this.type =="Demander"){
       this.navCtrl.push('ProposerSPage',{IDUSER : this.idUser});
     }
@@ -135,6 +133,7 @@ export class AfficheAnnoncePage {
       this.navCtrl.push('DemanderSPage',{IDUSER : this.idUser});
     }
   }
+  /*
   AddL(){
     if(this.type =="Demander"){
       this.navCtrl.push('ProposerSPage',{IDUSER : this.idUser});
@@ -151,9 +150,11 @@ export class AfficheAnnoncePage {
       this.navCtrl.push('DemanderSPage',{IDUSER : this.idUser});
     }
   }
+  */
   AdRC(){
     this.navCtrl.push('NewRepasPage',{IDUSER : this.idUser});
   }
+  /*
   AddCol(){
     if(this.type =="Demander"){
       this.navCtrl.push('ProposerSPage',{IDUSER : this.idUser});
@@ -162,6 +163,7 @@ export class AfficheAnnoncePage {
       this.navCtrl.push('DemanderSPage',{IDUSER : this.idUser});
     }
   }
+  */
 
 
 }

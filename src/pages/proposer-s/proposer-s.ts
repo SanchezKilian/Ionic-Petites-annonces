@@ -75,8 +75,11 @@ export class ProposerSPage {
     });
     confirm.present();
 
-
+    
 
     
+  }
+  back(){
+    this.navCtrl.setRoot('AfficheAnnoncePage',{IDUSER : this.Username,TYPE : "Demander"});
   }
 }

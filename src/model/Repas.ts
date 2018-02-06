@@ -1,4 +1,3 @@
-import { AngularFireDatabase } from 'angularfire2/database';
 import firebase from 'firebase';
 
 export class Repas{
@@ -47,7 +46,7 @@ export class Repas{
     }
 
     participate(){
-
+        
     }
 
 

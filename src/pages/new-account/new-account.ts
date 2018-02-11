@@ -23,7 +23,7 @@ export class NewAccountPage {
     console.log('ionViewDidLoad NewAccountPage');
   }
 
-  create(Username : string, Password : string, PasswordVerif){
+  create(Username : string, Nom : string, Password : string, PasswordVerif){
    
     if(Password == PasswordVerif){
       const personRefTemp: firebase.database.Reference = 
